@@ -1,0 +1,137 @@
+.sideLogoImg{
+    height: 60px;
+    width: auto;
+}
+.brand-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bg-nav-color{
+    background-color: #4D6694 !important;
+    color: #ffffff;
+}
+.bg-nav-color a{
+    color: #ffffff;
+}
+.nav-link.active{
+    background-color: yellow !important;
+    color: #000000 !important;
+}
+.nav-link{
+    color: #ffffff !important;
+}
+.sub-heading{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 8px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid yellow;
+}
+.sub-heading-1{
+    font-size: 14px;
+    font-weight: 700 !important;
+}
+.divContainer{
+    padding: 0px 5px 5px 5px;
+    top : 10px
+}
+
+.profileUl{
+    margin: 1rem;
+    font-size: 14px !important;
+}
+body{
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.companyDetails{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    align-items: flex-start;
+    margin-bottom: 0px;
+}
+.companyName{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-weight: 600;
+}
+.companyName p{
+    margin-bottom:2px ;
+}
+.companyDetails a{
+    margin-left: 5px ;
+}
+.companyDetails .term{
+    font-size: 12px;
+    display: block;
+    font-style: italic;
+}
+
+.ml1_5rem{
+    margin-left: 1.5rem;
+}
+.ml-4{
+    margin-left: 1rem;
+}
+html {
+    scroll-behavior: smooth;
+}
+.textWhite{
+    color: #ffffff !important;
+}
+.languages {
+    background-color: #4D6694;
+    border-radius: 5px;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding: 6px 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+}
+.custom-table td,
+.custom-table th {
+  padding: 4px 8px; /* Reduce cell spacing */
+  vertical-align: middle;
+  width: 150px;
+}
+
+.custom-table {
+  border-collapse: collapse;
+}
+
+.timeline-container{
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline-container:before {
+    background: #4D6694;
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    left: 28px;
+    position: absolute;
+    width: 2px;
+}
+.timeline-container>.timeline {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+.timeline-container>.timeline:before {
+    background: yellow;
+    border: 12px solid #4D6694 ;
+    border-radius: 50%;
+    content: " ";
+    display: inline-block;
+    height: 35px;
+    left: 12px;
+    position: absolute;
+    width: 35px;
+}
+.timeline.row{
+    margin-top: .75rem;
+}
+
+  
