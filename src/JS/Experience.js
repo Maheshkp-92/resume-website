@@ -85,7 +85,8 @@ const Experience = () =>{
                                         <li>Integrated OpenWeatherMap API to fetch real-time weather data for searched locations.</li>
                                         <li>Utilized Axios for API requests and Bootstrap for a clean, mobile-friendly UI.</li>
                                         <li>Demonstrated skills in API integration, state management, and frontend architecture.</li>
-                                        <li>SkyCast is directly integrated into this resume website (top-right corner) as a live widget, showcasing real-time weather data using <strong>ReactJS</strong>, <strong>Axios</strong>, and <strong>OpenWeatherMap API</strong>.</li>
+                                        <li>SkyCast is seamlessly integrated into this resume website as a live weather widget, built using ReactJS, Axios, and the OpenWeatherMap API.</li>
+                                        <li>In desktop view, the forecast is displayed directly. In mobile view, a SkyCast logo appears at the bottom-right corner — tapping it reveals the full weather forecast.</li>
                                     </ul>
                                 </div>
                             </div>

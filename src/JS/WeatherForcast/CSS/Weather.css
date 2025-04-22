@@ -103,3 +103,51 @@
   .modal-backdrop {
     z-index: 899;
   }
+
+  @media (max-width: 768px) {
+    .wfContainer {
+        top: auto;           /* Remove the top positioning */
+        bottom: 10vh;        /* Distance from the bottom */
+    }
+    .weather-card {
+      opacity: 1;
+    }
+}
+
+.icon-container{
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+}
+
+.icon-container img{
+  width: 10vh;
+  height: auto;
+}
+
+/* Show forecast container only on desktop */
+.forecastFullView {
+  display: block;
+}
+
+/* Hide forecast container on mobile unless toggled */
+@media (max-width: 767px) {
+  .forecastFullView {
+    display: none;
+  }
+  .forecastFullView.show {
+    display: block;
+  }
+}
+
+/* Hide icon by default */
+.icon-container {
+  display: none;
+}
+
+/* Show icon only on mobile */
+@media (max-width: 767px) {
+  .icon-container.mobile-only {
+    display: block;
+  }
+}

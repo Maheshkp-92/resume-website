@@ -133,5 +133,40 @@ ul.timeline-container:before {
 .timeline.row{
     margin-top: .75rem;
 }
+.nav-text{
+    margin-left: 5px;
+}
+.onlyMobileView{
+    display: none;
+}
+.onlyDesktopView{
+    display: block;
+}
+.side-nav {
+    width: 270px !important;
+    height: 100vh;
+    position: fixed;
+}
+@media (max-width: 768px) {
+    .nav-text {
+      display: none; /* Hide the text on mobile */
+    }
+    .nav-link i {
+      margin-right: 0; /* Remove margin between icon and text */
+    }
+    .side-nav {
+      width: 75px !important;
+      height: 100%;
+    }
+    .displayName{
+        display: none;
+    }
+    .onlyMobileView{
+        display: block;
+    }
+    .onlyDesktopView{
+        display: none;
+    }
+  }
 
   

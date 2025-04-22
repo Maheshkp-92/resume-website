@@ -104,81 +104,100 @@ const WeatherForcast = ()=>{
             const sign = hours >= 0 ? '+' : '-';
             return `UTC${sign}${Math.abs(hours).toString().padStart(2, '0')}:${minutes === 0 ? '00' : '30'}`;
           };
+          const [showForecast, setShowForecast] = useState(false);
+          const handleForecastDispaly = ()=>{
+            if (window.innerWidth < 768) {
+              setShowForecast(prev => !prev);
+            }
+          }
     return(
         <div className="wfContainer">
-                <div className="row wfContainer" >
-                <div className="col-md-12 col-lg-12 col-xs-12">
-                    <div className="outer-layer d-none">
-                      <h2>Weather</h2>
-                      <div className="row" >
-                          <div className="col-md-12 col-lg-12 col-xs-12 displayInput">
-                              {/*<input type="text" className="form-control inputPlc" value={cityInput} onChange={(e) => setCityInput(e.target.value)} />
-                              <button className="btn btn-primary ml-10" onClick={() => handleGetWeather(cityInput)}> Get Wather</button>*/}
-                          </div>
-                      </div>
-                    </div>
-                    <div className='row'>
-                            <div className='col-md-12'>
-                            {weather && (
-                              <div className="card weather-card mx-auto p-3" style={{ background: getCardBg(weather.weather[0].main), width: '260px' }}>
-                                <div className='row'>
-                                  <div className='col-md-12 col-lg-12 col-xs'>
-                                    <img src='/Skycast_tagline_white.png' alt="SkyCast Logo" className="img img-responsive skycast-logo"></img>
-                                  </div>
-                                </div>
-                                <hr/>
-                                <div className="d-flex flex-column gap-2">
-                                  {/* City and search icon */}
-                                  <div className="d-flex justify-content-between align-items-center">
-                                    <p className="m-0 location" title='Location'>
-                                      <i className="fas fa-map-marker-alt me-2"></i>
-                                      {weather.name}, {weather.sys.country}
-                                    </p>
-                                    <i title="Search Location" data-bs-toggle="modal" data-bs-target="#inputModal" className="fas fa-search hand"></i>
-                                  </div>
-                                    {/* Temp & Description in one row, left-aligned */}
-                                    <div className='row'>
-                                      <div className='col-md-12 col-lg-12'>
-                                        <p className="m-0" title='Temperature'><i className="fas fa-thermometer-half me-2"></i>{weather.main.temp}°C</p>
-                                        <p className="m-0 text-capitalize" title='Weather Description'> {getWeatherIcon(weather.weather[0].main)} {weather.weather[0].description}</p>
-                                      </div>
-                                    </div>
-                                    <hr/>
-                                    {/* Humidity & Wind speed in one row, left-aligned */}
-                                    <div className="row">
-                                      <div className="col text-start" title='Humidity'>
-                                        <p className="m-0"> <i className="fas fa-tint me-2"></i>{weather.main.humidity}%</p>
-                                      </div>
-                                      <div className="col text-start" title='Wind Speed'>
-                                        <p className="m-0"><i className="fas fa-wind me-2"></i>{weather.wind.speed} m/s</p>
-                                      </div>
-                                    </div>
-
-                                    {/* Sunrise & Sunset in one row, left-aligned */}
-                                    <div className="row">
-                                      <div className="col text-start" title='Sunrise'>
-                                        <p className="m-0"><i className="fas fa-sun me-2"></i>{formatTime(weather.sys.sunrise)}</p>
-                                      </div>
-                                      <div className="col text-start" title='Sunset'>
-                                        <p className="m-0"><i className="fas fa-moon me-2"></i>{formatTime(weather.sys.sunset)}</p>
-                                      </div>
-                                    </div>
-                                    <div className='row'>
-                                      <div className='col-md-12 col-lg-12 timezone'>
-                                        <p className="m-0">  <i className="fas fa-clock me-2"></i> Timezone: {formatTimezone(weather.timezone)} </p>
-                                      </div>
-                                    </div>
-                                </div>
-                                <div className='row'>
-                                  <div className='col-md-12 col-lg-12'> 
-                                  <p className="text-center text-muted mt-2 mb-0 poweredBy"> Powered by: <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a></p>
-                                  </div>
-                                </div>
-                              </div>
-                            )}
-                            <InputModal onCitySubmit={handleGetWeather} />
+          {/* -- Desktop View--*/}
+                <div className={`forecastFullView ${showForecast ? 'show' : 'hide'}`}>
+                  <div className="row" >
+                  <div className="col-md-12 col-lg-12 col-xs-12">
+                      <div className="outer-layer d-none">
+                        <h2>Weather</h2>
+                        <div className="row" >
+                            <div className="col-md-12 col-lg-12 col-xs-12 displayInput">
+                                {/*<input type="text" className="form-control inputPlc" value={cityInput} onChange={(e) => setCityInput(e.target.value)} />
+                                <button className="btn btn-primary ml-10" onClick={() => handleGetWeather(cityInput)}> Get Wather</button>*/}
                             </div>
-                    </div>
+                        </div>
+                      </div>
+                      <div className='row'>
+                              <div className='col-md-12'>
+                              {weather && (
+                                <div className="card weather-card mx-auto p-3" style={{ background: getCardBg(weather.weather[0].main), width: '260px' }}>
+                                  <div className='row'>
+                                    <div className='col-md-12 col-lg-12 col-xs'>
+                                      <img src='/Skycast_tagline_white.png' alt="SkyCast Logo" className="img img-responsive skycast-logo"></img>
+                                    </div>
+                                  </div>
+                                  <hr/>
+                                  <div className="d-flex flex-column gap-2">
+                                    {/* City and search icon */}
+                                    <div className="d-flex justify-content-between align-items-center">
+                                      <p className="m-0 location" title='Location'>
+                                        <i className="fas fa-map-marker-alt me-2"></i>
+                                        {weather.name}, {weather.sys.country}
+                                      </p>
+                                      <i title="Search Location" data-bs-toggle="modal" data-bs-target="#inputModal" className="fas fa-search hand"></i>
+                                    </div>
+                                      {/* Temp & Description in one row, left-aligned */}
+                                      <div className='row'>
+                                        <div className='col-md-12 col-lg-12'>
+                                          <p className="m-0" title='Temperature'><i className="fas fa-thermometer-half me-2"></i>{weather.main.temp}°C</p>
+                                          <p className="m-0 text-capitalize" title='Weather Description'> {getWeatherIcon(weather.weather[0].main)} {weather.weather[0].description}</p>
+                                        </div>
+                                      </div>
+                                      <hr/>
+                                      {/* Humidity & Wind speed in one row, left-aligned */}
+                                      <div className="row">
+                                        <div className="col text-start" title='Humidity'>
+                                          <p className="m-0"> <i className="fas fa-tint me-2"></i>{weather.main.humidity}%</p>
+                                        </div>
+                                        <div className="col text-start" title='Wind Speed'>
+                                          <p className="m-0"><i className="fas fa-wind me-2"></i>{weather.wind.speed} m/s</p>
+                                        </div>
+                                      </div>
+
+                                      {/* Sunrise & Sunset in one row, left-aligned */}
+                                      <div className="row">
+                                        <div className="col text-start" title='Sunrise'>
+                                          <p className="m-0"><i className="fas fa-sun me-2"></i>{formatTime(weather.sys.sunrise)}</p>
+                                        </div>
+                                        <div className="col text-start" title='Sunset'>
+                                          <p className="m-0"><i className="fas fa-moon me-2"></i>{formatTime(weather.sys.sunset)}</p>
+                                        </div>
+                                      </div>
+                                      <div className='row'>
+                                        <div className='col-md-12 col-lg-12 timezone'>
+                                          <p className="m-0">  <i className="fas fa-clock me-2"></i> Timezone: {formatTimezone(weather.timezone)} </p>
+                                        </div>
+                                      </div>
+                                  </div>
+                                  <div className='row'>
+                                    <div className='col-md-12 col-lg-12'> 
+                                    <p className="text-center text-muted mt-2 mb-0 poweredBy"> Powered by: <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                              <InputModal onCitySubmit={handleGetWeather} />
+                              </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            {/*-- Mobile View--*/}
+            <div className='forecastMobileView'>
+                <div className='row'>
+                    <div className='col-md-12'>
+                      <div className='icon-container mobile-only'>
+                            <img className='img img-resposive' src='/skycast_icon.png' alt="icon" onClick={handleForecastDispaly}></img>
+                      </div>
+                    </div> 
                 </div>
             </div>
         </div>

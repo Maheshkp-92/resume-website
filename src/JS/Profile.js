@@ -3,14 +3,23 @@ const Home = () => {
     return(
         <div className='row'>
             <div className='col-md-12 col-lg-12 col-xs-12'>
-                <div className='divContainer'><span className='sub-heading'>Profile</span></div>
-                <ul className='profileUl'>
-                    <li> Highly motivated Software Developer with over 6 years of experience in frontend development. Proficient in HTML, CSS, JavaScript, and jQuery, ReactJs. </li>
-                    <li> assionate about software development, constantly learning and staying updated with the latest technologies.  </li>
-                    <li> Strong problem-solving skills and a track record of successful project deployments.  </li>
-                    <li> Seeking a challenging position to leverage expertise, drive career advancement, and contribute to meaningful projects  </li>
-                </ul>
-                
+                <div className='row onlyMobileView'>
+                    <div className='col-md-12 col-lg-12'>
+                        <h3>Mahesh Kumar K P</h3>
+                        <hr></hr>
+                    </div>
+                </div>
+                <div className='row'>
+                    <div className='col-md-12 col-lg-12'>
+                    <div className='divContainer'><span className='sub-heading'>Profile</span></div>
+                        <ul className='profileUl'>
+                            <li> Highly motivated Software Developer with over 6 years of experience in frontend development. Proficient in HTML, CSS, JavaScript, and jQuery, ReactJs. </li>
+                            <li> assionate about software development, constantly learning and staying updated with the latest technologies.  </li>
+                            <li> Strong problem-solving skills and a track record of successful project deployments.  </li>
+                            <li> Seeking a challenging position to leverage expertise, drive career advancement, and contribute to meaningful projects  </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     );

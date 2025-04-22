@@ -5,6 +5,7 @@ import Experience from './JS/Experience';
 import Education from './JS/Education';
 import Skills from './JS/Skills';
 import WeatherForcast from './JS/WeatherForcast/JS/WeatherForcast';
+import Contact from './JS/Contact';
 
 function App() {
   return (
@@ -12,11 +13,12 @@ function App() {
       <div className='col-md-12'>
         <div className="d-flex">
           <SideNav />
-          <div className="flex-grow-1" style={{ marginLeft: '250px', padding: '20px' }}>
+          <div className="main-content">
             <div id='profile'><Profile /></div>
             <div id='experience'><Experience /></div>
             <div id='education'><Education /></div>
             <div id='skills'><Skills/></div>
+            <div id='contact'><Contact/></div>
             <WeatherForcast/>
           </div>
         </div>
