@@ -19,6 +19,9 @@ function InputModal({onCitySubmit, modalId = 'inputModal', title = 'Enter Your I
             }
             await onCitySubmit(inputCity); // send city to parent
             const modalEl = document.getElementById(modalId);
+            if (modalEl.contains(document.activeElement)) {
+              document.activeElement.blur();
+            }
             const modalInstance = window.bootstrap.Modal.getInstance(modalEl);
             if (modalInstance) modalInstance.hide();
           };

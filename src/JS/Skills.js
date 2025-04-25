@@ -36,6 +36,7 @@ const Skills = ()=>{
                                 <td>
                                     <div className='d-flex flex-row align-items-baseline mt-2'>
                                         <div className='languages'>Phabricator</div>
+                                        <div className='languages'>Git-Hub</div>
                                     </div>
                                 </td>
                             </tr>

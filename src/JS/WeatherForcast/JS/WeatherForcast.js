@@ -106,8 +106,11 @@ const WeatherForcast = ()=>{
           };
           const [showForecast, setShowForecast] = useState(false);
           const handleForecastDispaly = ()=>{
+            console.log('Clicked...! 1', window.innerWidth)
             if (window.innerWidth < 768) {
+              console.log('Clicked...! 2')
               setShowForecast(prev => !prev);
+              console.log('Clicked...! 3')
             }
           }
     return(
@@ -193,7 +196,7 @@ const WeatherForcast = ()=>{
             {/*-- Mobile View--*/}
             <div className='forecastMobileView'>
                 <div className='row'>
-                    <div className='col-md-12'>
+                    <div className='col-md-12 col-sm-12 col-xs-12 col-lg-12'>
                       <div className='icon-container mobile-only'>
                             <img className='img img-resposive' src='/skycast_icon.png' alt="icon" onClick={handleForecastDispaly}></img>
                       </div>

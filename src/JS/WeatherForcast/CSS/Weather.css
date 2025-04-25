@@ -118,6 +118,7 @@
   position: fixed;
   bottom: 20px;
   right: 10px;
+  z-index: 9999;
 }
 
 .icon-container img{
