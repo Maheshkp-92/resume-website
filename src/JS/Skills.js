@@ -11,7 +11,7 @@ const Skills = ()=>{
                                 <td><b>Programming Languages:</b></td>
                                 <td>
                                     <div className='d-flex flex-row align-items-baseline mt-2'>
-                                        <div className='languages'>HTML</div> <div className='languages'>CSS</div> <div className='languages'>JavaScript</div> <div className='languages'>jQuery</div> <div className='languages'>ReactJs</div>
+                                        <div className='languages'>HTML 5</div> <div className='languages'>CSS / SCSS</div> <div className='languages'>JavaScript</div> <div className='languages'>jQuery</div> <div className='languages'>ReactJs</div>
                                     </div>
                                 </td>
                             </tr>
@@ -37,6 +37,7 @@ const Skills = ()=>{
                                     <div className='d-flex flex-row align-items-baseline mt-2'>
                                         <div className='languages'>Phabricator</div>
                                         <div className='languages'>Git-Hub</div>
+                                        <div className='languages'>Docker</div>
                                     </div>
                                 </td>
                             </tr>

@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/Module.css'
+import '../css/main.scss'
 
 const Experience = () =>{
     return(
@@ -74,7 +74,6 @@ const Experience = () =>{
                                 </div>
                             </div>
                         </li>
-
                         <li className="timeline">
                             {/*-- Skycast WeatherApp --*/}
                             <div className="row">
@@ -93,8 +92,67 @@ const Experience = () =>{
                         </li>
                     </ul>
                     
-                    
-                    
+                    {/*-- Freelance --*/}
+                    <div className="row">
+                        <div className="col-md-12 col-lg-12 companyDetails">
+                            <div className="companyDetails">
+                                <div className="companyName">
+                                    <p>Freelance - </p>
+                                    <small><a target="_blank_" href="https://knsexpress.netlify.app/">KNS Logistics</a> </small>
+                                </div>
+                                    <div className="term">Sept 2024 - Present</div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12 col-lg-12 ml1_5rem">
+                                    <div className="divContainer">
+                                        <span className='sub-heading-1'><a href="https://knsexpress.netlify.app/">KNS Logistics</a> – Static Website</span>
+                                        <ul className="mb-0">
+                                            <li>Developed and deployed a fully responsive static website to showcase logistics services, branches, and contact details.</li>
+                                            <li>Focused on clean UI, mobile responsiveness, and professional branding using CSS and Bootstrap</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-md-12 col-lg-12 ml1_5rem">
+                                        <div className="divContainer">
+                                            <span className='sub-heading-1'>KNS Logistics - Consignment Booking(In Progress)</span>
+                                            <ul className="mb-0">
+                                                <li>Built an interactive frontend for booking consignments between Consignor and Consignee.</li>
+                                                <li>Developed a PDF reporting feature based on Lorry Receipts (LRs), summarizing transported goods and destinations.</li>
+                                                <li>Utilized modular SCSS for styling and Docker containers to streamline development and deployment workflows.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/*-- Personal Project--*/}
+
+                    <div className="row">
+                        <div className="col-md-12 col-lg-12 companyDetails">
+                            <div className="companyDetails">
+                                <div className="companyName">
+                                    <p>Personal - </p> <small>Skycast </small>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col-md-12 col-lg-12 ml1_5rem">
+                                    <div className="divContainer">
+                                        <span className='sub-heading-1'>Skycast</span>
+                                        <ul className="mb-0">
+                                            <li>Designed and developed “SkyCast”, a responsive weather application</li>
+                                            <li>Integrated OpenWeatherMap API to fetch real-time weather data for searched locations.</li>
+                                            <li>Utilized Axios for API requests and Bootstrap for a clean, mobile-friendly UI.</li>
+                                            <li>Demonstrated skills in API integration, state management, and frontend architecture.</li>
+                                            <li>SkyCast is seamlessly integrated into this resume website as a live weather widget, built using ReactJS, Axios, and the OpenWeatherMap API.</li>
+                                            <li>In desktop view, the forecast is displayed directly. In mobile view, a SkyCast logo appears at the bottom-right corner — tapping it reveals the full weather forecast.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
                     {/*-- Key Challenges --*/}
                     <div className="row">
@@ -110,9 +168,8 @@ const Experience = () =>{
                             </ul>
                         </div>
                     </div>
-                
+                </div>
             </div>
-        </div>
     );
 } 
 

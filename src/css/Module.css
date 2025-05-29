@@ -168,5 +168,15 @@ ul.timeline-container:before {
         display: none;
     }
   }
-
-  
+.btn--primary-outline{
+    background-color: yellow;
+    color: #000000 !important;
+}
+.btn--primary-outline:hover{
+    border: 2px solid yellow;
+    background-color: #4D6694;
+    color: #ffffff !important;
+}
+.linkedIn{
+    text-decoration: none;
+}
