@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-scroll';
 import { FaUser, FaBriefcase, FaGraduationCap, FaCode, FaEnvelope } from 'react-icons/fa';
 import HeroSection from './jsx/components/HeroSection';
 import ExperienceSection from './jsx/components/ExperienceSection';
@@ -19,7 +18,7 @@ const sections = [
 function App() {
   return (
     <div className="min-h-screen bg-primary text-white font-sans">
-      <FloatingDock />
+      <FloatingDock sections={sections} />
       <main className="relative">
         {/* Background gradient */}
         <div className="fixed inset-0 bg-gradient-to-br from-primary via-primary to-secondary pointer-events-none"></div>
