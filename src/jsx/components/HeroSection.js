@@ -55,7 +55,7 @@ const HeroSection = () => {
               Let's Talk
             </button>
             <a 
-              href="/assets/Mahesh_FrontEnd_Developer.pdf" 
+              href="/assets/Mahesh_Kumar_Frontend_Resume.pdf" 
               download
               className="px-6 py-3 bg-accent-yellow hover:bg-opacity-80 text-black rounded-lg font-semibold transition-all flex items-center gap-2"
             >
