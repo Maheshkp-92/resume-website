@@ -18,7 +18,7 @@ const educationData = [
 
 const EducationSection = () => {
   return (
-    <section id="education" className="min-h-screen bg-primary py-16 px-4">
+    <section id="education" className="section-base section-primary">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-accent-yellow to-accent-blue bg-clip-text text-transparent">
           Education

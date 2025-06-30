@@ -43,6 +43,32 @@
   .icon-button-hover {
     @apply hover:bg-accent-yellow hover:text-primary;
   }
+
+  /* New section styling */
+  .section-base {
+    @apply min-h-screen py-16 px-4 relative;
+  }
+
+  .section-primary {
+    @apply bg-primary border-b border-gray-800;
+  }
+
+  .section-alternate {
+    @apply bg-primary/60 border-b border-gray-800;
+  }
+
+  /* External link icon styling */
+  .external-link-icon {
+    @apply inline-block ml-2 w-4 h-4 text-accent-blue transition-all;
+  }
+
+  .external-link-wrapper {
+    @apply inline-flex items-center hover:text-accent-yellow transition-colors;
+  }
+
+  .external-link-wrapper:hover .external-link-icon {
+    @apply text-accent-yellow transform translate-x-0.5 -translate-y-0.5;
+  }
 }
 
 /* Smooth scrolling for Safari */

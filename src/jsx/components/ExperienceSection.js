@@ -2,6 +2,24 @@ import React, { useState } from 'react';
 import { FaBriefcase, FaFilter, FaExchangeAlt, FaBolt, FaMobile, FaUserCog } from 'react-icons/fa';
 import Modal from './Modal';
 
+// SVG for external link icon
+const ExternalLinkIcon = () => (
+  <svg
+    className="external-link-icon"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+    />
+  </svg>
+);
+
 const experiences = [
   {
     title: "Freelance Developer",
@@ -139,7 +157,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" className="min-h-screen bg-primary py-16 px-4">
+    <section id="experience" className="section-base section-alternate">
       <div className="container mx-auto max-w-7xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-accent-yellow to-accent-blue bg-clip-text text-transparent">
           Professional Experience
@@ -157,9 +175,10 @@ const ExperienceSection = () => {
                       href={exp.companyUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="hover:text-accent-yellow transition-colors"
+                      className="external-link-wrapper"
                     >
                       {exp.company}
+                      <ExternalLinkIcon />
                     </a>
                   ) : (
                     exp.company

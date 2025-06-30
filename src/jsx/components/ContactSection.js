@@ -34,13 +34,13 @@ const contactData = [
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="min-h-screen bg-primary py-16 px-4 flex items-center">
+    <section id="contact" className="section-base section-primary flex items-center">
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-accent-yellow to-accent-blue bg-clip-text text-transparent">
           Get In Touch
         </h2>
 
-        <div className="bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800">
+        <div className="bg-black bg-opacity-50 rounded-lg p-8 border border-gray-800 hover:border-accent-blue transition-all">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {contactData.map((contact, index) => (
               <a

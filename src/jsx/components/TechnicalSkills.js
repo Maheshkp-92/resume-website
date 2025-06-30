@@ -49,7 +49,7 @@ const skillsData = [
 
 const TechnicalSkills = () => {
   return (
-    <section id="skills" className="min-h-screen bg-primary py-12 px-4">
+    <section id="skills" className="section-base section-alternate">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 bg-gradient-to-r from-accent-yellow to-accent-blue bg-clip-text text-transparent">
           Technical Skills
@@ -57,7 +57,7 @@ const TechnicalSkills = () => {
 
         <div className="space-y-6">
           {skillsData.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-black bg-opacity-50 rounded-lg p-4 border border-gray-800">
+            <div key={categoryIndex} className="bg-black bg-opacity-50 rounded-lg p-4 border border-gray-800 hover:border-accent-blue transition-all">
               <h3 className="text-lg font-semibold text-accent-yellow mb-4 px-2">
                 {category.category}
               </h3>
