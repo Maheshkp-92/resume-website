@@ -5,13 +5,18 @@ import {
   FaJs, 
   FaReact, 
   FaDocker, 
-  FaGithub, 
+  FaGithub,
+  FaNodeJs,
+  FaBootstrap,
+  FaEdit 
 } from 'react-icons/fa';
 import { 
   SiJquery, 
   SiVisualstudiocode, 
   SiAsana, 
-  SiPhabricator 
+  SiPhabricator,
+  SiCkeditor4,
+  SiSlickpic
 } from 'react-icons/si';
 
 const skillsData = [
@@ -22,7 +27,17 @@ const skillsData = [
       { name: "CSS / SCSS", icon: FaCss3Alt, color: "#264DE4" },
       { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
       { name: "jQuery", icon: SiJquery, color: "#0769AD" },
-      { name: "ReactJs", icon: FaReact, color: "#61DAFB" }
+      { name: "ReactJs", icon: FaReact, color: "#61DAFB" },
+      { name: "Node.js", icon: FaNodeJs, color: "#339933" },
+      { name: "Bootstrap", icon: FaBootstrap, color: "#7952B3" }
+    ]
+  },
+  {
+    category: "Rich Text Editors & Data Grid",
+    skills: [
+      { name: "CKEditor", icon: SiCkeditor4, color: "#0287D0" },
+      { name: "Summernote", icon: FaEdit, color: "#00C788" },
+      { name: "Slick-grid", icon: SiSlickpic, color: "#4A90E2" }
     ]
   },
   {
