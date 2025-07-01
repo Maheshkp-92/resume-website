@@ -7,57 +7,67 @@ import {
   FaDocker, 
   FaGithub,
   FaNodeJs,
-  FaBootstrap,
-  FaEdit 
+  FaCode,
+  FaDatabase,
+  FaBitbucket,
+  FaJira,
+  FaSyncAlt
 } from 'react-icons/fa';
 import { 
   SiJquery, 
-  SiVisualstudiocode, 
-  SiAsana, 
-  SiPhabricator,
-  SiCkeditor4,
-  SiSlickpic
+  SiMysql,
+  SiJest,
+  SiNetlify
 } from 'react-icons/si';
+import { VscCode } from 'react-icons/vsc';
+import { GoGitBranch } from 'react-icons/go';
 
 const skillsData = [
   {
-    category: "Programming Languages",
+    category: "Programming Languages & Core Technologies",
     skills: [
-      { name: "HTML 5", icon: FaHtml5, color: "#E44D26" },
-      { name: "CSS / SCSS", icon: FaCss3Alt, color: "#264DE4" },
+      { name: "HTML", icon: FaHtml5, color: "#E44D26" },
+      { name: "CSS/SCSS", icon: FaCss3Alt, color: "#264DE4" },
       { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
+      { name: "OOP", icon: VscCode, color: "#4CAF50" },
+      { name: "DS & Algorithms", icon: FaCode, color: "#FF9800" }
+    ]
+  },
+  {
+    category: "Frontend Technologies",
+    skills: [
       { name: "jQuery", icon: SiJquery, color: "#0769AD" },
-      { name: "ReactJs", icon: FaReact, color: "#61DAFB" },
+      { name: "ReactJs", icon: FaReact, color: "#61DAFB" }
+    ]
+  },
+  {
+    category: "Backend & Databases",
+    skills: [
       { name: "Node.js", icon: FaNodeJs, color: "#339933" },
-      { name: "Bootstrap", icon: FaBootstrap, color: "#7952B3" }
+      { name: "MySQL", icon: SiMysql, color: "#4479A1" }
     ]
   },
   {
-    category: "Rich Text Editors & Data Grid",
+    category: "Testing",
     skills: [
-      { name: "CKEditor", icon: SiCkeditor4, color: "#0287D0" },
-      { name: "Summernote", icon: FaEdit, color: "#00C788" },
-      { name: "Slick-grid", icon: SiSlickpic, color: "#4A90E2" }
+      { name: "Jest", icon: SiJest, color: "#C21325" }
     ]
   },
   {
-    category: "Tools/Editor",
+    category: "Version Control & Deployment",
     skills: [
-      { name: "VS Code", icon: SiVisualstudiocode, color: "#007ACC" }
-    ]
-  },
-  {
-    category: "Management Tool",
-    skills: [
-      { name: "Asana", icon: SiAsana, color: "#F06A6A" }
-    ]
-  },
-  {
-    category: "Build & Repository Management",
-    skills: [
-      { name: "Phabricator", icon: SiPhabricator, color: "#4A5F88" },
+      { name: "Git", icon: GoGitBranch, color: "#F05032" },
       { name: "GitHub", icon: FaGithub, color: "#ffffff" },
+      { name: "Bitbucket", icon: FaBitbucket, color: "#0052CC" },
+      { name: "Netlify", icon: SiNetlify, color: "#00C7B7" },
       { name: "Docker", icon: FaDocker, color: "#2496ED" }
+    ]
+  },
+  {
+    category: "Project Management & Methodologies",
+    skills: [
+      { name: "Jira", icon: FaJira, color: "#0052CC" },
+      { name: "Agile", icon: FaSyncAlt, color: "#0052CC" }
     ]
   }
 ];
